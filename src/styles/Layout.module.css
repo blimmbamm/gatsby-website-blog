@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  
+  color: inherit;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+.navbar .active {
+  color: var(--primary-green)
+}
+
+.content {
+  margin: 1rem;
+}

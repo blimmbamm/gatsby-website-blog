@@ -1,0 +1,24 @@
+.chip {
+  background-color: var(--primary-green);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  /* padding-inline: 1rem; */
+  width: fit-content;
+  color: white;
+  /* border: 1px solid transparent; */
+  user-select: none;
+}
+
+.unselected {
+  background-color: #b3dda3;
+  color: var(--dark-gray);
+}
+
+.toggleable {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  box-shadow: 1px 1px 3px var(--green-dark);
+  &:hover {
+    cursor: pointer;
+  }
+}

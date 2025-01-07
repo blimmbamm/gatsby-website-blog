@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.icon > svg > path {
+  fill: var(--light-gray);
+}
+
+.container:hover {
+  & .text {
+    color: var(--primary-green);
+  }
+
+  & svg > path {
+    fill: var(--primary-green);
+  }
+}
+
+.text {
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--light-gray);
+}
+
+.icon {
+  height: 1.5rem;
+}

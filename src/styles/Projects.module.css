@@ -1,0 +1,22 @@
+.title {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 2rem;
+}
+
+.date {
+  margin-top: 0;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 100;
+  color: var(--medium-gray);
+}
+
+.description {
+  margin-block: 2rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
