@@ -5,15 +5,14 @@ import * as styles from "./TechStack.module.css";
 
 type TechStackProps = {
   stack: readonly (string | null)[];
-  selected?: readonly(string | null)[];
+  selected?: readonly (string | null)[];
   initiallySelected?: boolean;
-  toggleable?: boolean;
+  selectable?: boolean;
   onToggleTechSelection?: (tech: string | null) => void;
 };
 
 export default function TechStack(props: TechStackProps) {
-
-  function handleToggleChip(tech: string | null){
+  function handleToggleChip(tech: string | null) {
     props.onToggleTechSelection?.(tech);
   }
 
@@ -21,13 +20,11 @@ export default function TechStack(props: TechStackProps) {
     <div className={styles.container}>
       {props.stack.map((tech) => (
         <Chip
-          // onClick={() => props.onClick?.(stack || "")}
           key={tech}
           text={tech || ""}
-          initiallySelected={props.initiallySelected}
+          // initiallySelected={props.initiallySelected}
           onToggle={() => handleToggleChip(tech)}
-          toggleable={props.toggleable}
-          // selected={props.selected?.includes(stack)}
+          selectable={props.selectable}
         />
       ))}
     </div>

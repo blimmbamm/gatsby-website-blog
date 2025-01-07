@@ -6,12 +6,12 @@ interface ChipProps {
   text: string;
   // onClick?: React.MouseEventHandler;
   onToggle: (selected: boolean) => void;
-  toggleable?: boolean;
-  initiallySelected?: boolean;
+  selectable?: boolean;
+  // initiallySelected?: boolean;
 }
 
 export default function Chip(props: ChipProps) {
-  const [selected, setSelected] = useState(props.initiallySelected);
+  const [selected, setSelected] = useState(false);
 
   function toggleSelection() {
     props.onToggle(!selected);
@@ -20,9 +20,9 @@ export default function Chip(props: ChipProps) {
 
   return (
     <div
-      onClick={props.toggleable ? toggleSelection : undefined}
-      className={`${styles.chip} ${!selected && styles.unselected} ${
-        props.toggleable && styles.toggleable
+      onClick={props.selectable ? toggleSelection : undefined}
+      className={`${styles.chip} ${selected && styles.selected} ${
+        props.selectable && styles.selectable
       }`}
     >
       <span>{props.text}</span>

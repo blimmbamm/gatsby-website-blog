@@ -1,0 +1,27 @@
+.host {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--green-dark);
+  color: var(--background-whitish);
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.icon {
+  height: 1rem;
+  & svg > path {
+    fill: white;
+  }
+}

@@ -8,6 +8,7 @@ import CardList from "../../components/CardList/CardList";
 import TechStack from "../../components/TechStack/TechStack";
 
 import * as styles from "../../styles/Blog.module.css";
+import Button from "../../components/Button/Button";
 
 export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
   // Slightly reshape data:
@@ -36,7 +37,7 @@ export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
 
   // Sort by date:
   blogPosts.sort((postA, postB) => {
-    if(!postA.date && !postB.date) return 1
+    if (!postA.date && !postB.date) return 1;
 
     if (orderAsc) {
       return postA.date! < postB.date! ? -1 : 1;
@@ -56,9 +57,9 @@ export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
       setTechSelection((prevSelection) => [...prevSelection, selectedTech]);
     }
   }
-  
-  function toggleOrder(){
-    setOrderAsc(prevAsc => !prevAsc)
+
+  function toggleOrder() {
+    setOrderAsc((prevAsc) => !prevAsc);
   }
 
   return (
@@ -68,23 +69,26 @@ export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
           <TechStack
             onToggleTechSelection={toggleTechSelection}
             stack={allTechnologies}
-            initiallySelected={false}
-            toggleable
+            selectable
           />
-          <div onClick={toggleOrder} className={styles.sort}>
-            <div className={styles.icon}>
-              {orderAsc ? <ArrowDownIcon /> : <ArrowUpIcon />}
-            </div>
-            <span>Date</span>
-          </div>
+          <Button
+            className={styles.sort}
+            icon={orderAsc ? <ArrowDownIcon /> : <ArrowUpIcon />}
+            label="Date"
+            onClick={toggleOrder}
+          />
         </div>
         {blogPosts.map((post) => (
           <Card key={post.id}>
-            <h2 className={styles.date}>{post.date}</h2>
-            <Link className={styles.link} to={post.slug || ""}>
-              {post.title}
-            </Link>
-            <TechStack stack={post.stack || []} initiallySelected />
+            <div className={styles.post}>
+              <div>
+                <h2 className={styles.date}>{post.date}</h2>
+                <Link className={styles.link} to={post.slug || ""}>
+                  {post.title}
+                </Link>
+              </div>
+              <TechStack stack={post.stack || []} />
+            </div>
           </Card>
         ))}
       </CardList>

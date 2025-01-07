@@ -2715,7 +2715,7 @@ type BlogPostTemplateQueryVariables = Exact<{
 }>;
 
 
-type BlogPostTemplateQuery = { readonly markdownRemark: { readonly html: string | null, readonly frontmatter: { readonly slug: string | null, readonly title: string | null } | null } | null };
+type BlogPostTemplateQuery = { readonly markdownRemark: { readonly html: string | null, readonly frontmatter: { readonly date: string | null, readonly slug: string | null, readonly title: string | null } | null } | null };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 

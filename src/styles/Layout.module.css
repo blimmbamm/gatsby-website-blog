@@ -8,18 +8,26 @@
 
 .navbar a {
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 600;
   text-decoration: none;
-  
-  color: inherit;
+  padding: 0.25rem 0.5rem;
+  color: var(--background-whitish);
+  border: 3px solid transparent;
+  border-radius: 8px;
 }
 
 .navbar a:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+  border: 3px solid var(--background-whitish);
 }
 
 .navbar .active {
-  color: var(--primary-green)
+  color: var(--primary-green);
+  border: 3px solid var(--green-dark);
+  &:hover {
+    border: 3px solid var(--green-dark);
+  }
+
 }
 
 .content {

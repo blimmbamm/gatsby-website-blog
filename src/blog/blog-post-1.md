@@ -6,7 +6,9 @@ title: "How to use markdown with Gatsby"
 stack: ["something", "else"]
 ---
 
-Something standard JavaScript:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit `inline-code` in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Blabla, some javascript code snippet:
 
 ```js
 const affe = {banane: 'yes'};
@@ -18,7 +20,8 @@ function whatever(){
 }
 ```
 
-A page about Title
+And here some jsx snippet, also working:
+
 ```jsx
 export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
   //highlight-next-line

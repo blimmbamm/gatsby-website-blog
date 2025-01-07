@@ -3,7 +3,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './src/components/Layout';
 
 
-import "prismjs/themes/prism-solarizedlight.css";
+// import "prismjs/themes/prism-solarizedlight.css";
+import "./src/styles/prism-theme.css";
 import "prismjs/plugins/line-highlight/prism-line-highlight.css";
 import "./src/global.css";
 

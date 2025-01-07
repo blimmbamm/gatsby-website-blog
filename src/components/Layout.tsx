@@ -10,7 +10,7 @@ export default function Layout(props: PropsWithChildren) {
         <Link to="/" activeClassName={styles.active}>
           Home
         </Link>
-        <Link to="/blog" activeClassName={styles.active}>
+        <Link to="/blog" activeClassName={styles.active} partiallyActive >
           Blog
         </Link>
         <Link to="/projects" activeClassName={styles.active}>
