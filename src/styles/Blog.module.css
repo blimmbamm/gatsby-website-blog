@@ -1,7 +1,15 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  flex: 1;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .post {
@@ -14,7 +22,7 @@
 .link {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: var(--dark-gray);
   font-size: 1.25rem;
   font-weight: bold;
 
@@ -36,4 +44,10 @@
 .sort {
   margin-left: 40px;
   box-shadow: 1px 1px 2px var(--green-dark);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--green-dark);
+  margin-inline: -0.5rem;
 }

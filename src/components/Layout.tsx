@@ -5,12 +5,12 @@ import * as styles from "../styles/Layout.module.css";
 
 export default function Layout(props: PropsWithChildren) {
   return (
-    <>
+    <div className={styles.layout}>
       <nav className={styles.navbar}>
         <Link to="/" activeClassName={styles.active}>
           Home
         </Link>
-        <Link to="/blog" activeClassName={styles.active} partiallyActive >
+        <Link to="/blog" activeClassName={styles.active} partiallyActive>
           Blog
         </Link>
         <Link to="/projects" activeClassName={styles.active}>
@@ -18,6 +18,9 @@ export default function Layout(props: PropsWithChildren) {
         </Link>
       </nav>
       <main className={styles.content}>{props.children}</main>
-    </>
+      <footer className={styles.footer}>
+        &copy; 2025 Robin Heinz
+      </footer>
+    </div>
   );
 }

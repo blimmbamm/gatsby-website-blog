@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import ArrowDownIcon from "../../images/arrow_downward.svg";
 import ArrowUpIcon from "../../images/arrow_upward.svg";
 import Card from "../../components/Card/Card";
-import CardList from "../../components/CardList/CardList";
 import TechStack from "../../components/TechStack/TechStack";
 
 import * as styles from "../../styles/Blog.module.css";
@@ -63,36 +62,35 @@ export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
   }
 
   return (
-    <>
-      <CardList>
-        <div className={styles.menu}>
-          <TechStack
-            onToggleTechSelection={toggleTechSelection}
-            stack={allTechnologies}
-            selectable
-          />
-          <Button
-            className={styles.sort}
-            icon={orderAsc ? <ArrowDownIcon /> : <ArrowUpIcon />}
-            label="Date"
-            onClick={toggleOrder}
-          />
-        </div>
-        {blogPosts.map((post) => (
-          <Card key={post.id}>
-            <div className={styles.post}>
-              <div>
-                <h2 className={styles.date}>{post.date}</h2>
-                <Link className={styles.link} to={post.slug || ""}>
-                  {post.title}
-                </Link>
-              </div>
-              <TechStack stack={post.stack || []} />
+    <Card className={styles.container}>
+      <div className={styles.menu}>
+        <TechStack
+          onToggleTechSelection={toggleTechSelection}
+          stack={allTechnologies}
+          selectable
+        />
+        <Button
+          className={styles.sort}
+          icon={orderAsc ? <ArrowDownIcon /> : <ArrowUpIcon />}
+          label="Date"
+          onClick={toggleOrder}
+        />
+      </div>
+      {blogPosts.map((post, index, posts) => (
+        <div key={post.id}>
+          <div key={post.id} className={styles.post}>
+            <div>
+              <h2 className={styles.date}>{post.date}</h2>
+              <Link className={styles.link} to={post.slug || ""}>
+                {post.title}
+              </Link>
             </div>
-          </Card>
-        ))}
-      </CardList>
-    </>
+            <TechStack stack={post.stack || []} />
+          </div>
+          {index < posts.length-1 && <hr className={styles.divider} />}
+        </div>
+      ))}
+    </Card>
   );
 }
 

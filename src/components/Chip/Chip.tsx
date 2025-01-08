@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import * as styles from "./Chip.module.css";
 
-// type ChipProps = {text: string} &
 interface ChipProps {
   text: string;
-  // onClick?: React.MouseEventHandler;
   onToggle: (selected: boolean) => void;
   selectable?: boolean;
-  // initiallySelected?: boolean;
 }
 
 export default function Chip(props: ChipProps) {

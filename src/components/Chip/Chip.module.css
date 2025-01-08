@@ -15,9 +15,8 @@
 .selectable {
   font-size: 0.8rem;
   padding: 0.3rem 0.6rem;
-  box-shadow: 0.5px 0.5px 1px var(--green-dark);
   &:hover {
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
   }
 }
