@@ -1,3 +1,5 @@
+/* Uses solarized light theme as base */
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #657b83; /* base00 */
@@ -21,16 +23,6 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-/* pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-	background: #073642; 
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-	background: #073642; 
-} */
-
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
@@ -41,9 +33,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	/* background-color: #fdf6e3; */
-	/* background-color: #7bec6c;  */
-	background-color: var(--code-background);
+	background-color: var(--light-steel);
 }
 
 /* Inline code */
@@ -126,15 +116,13 @@ pre[class*="language-"] {
 /* Gatsby plugin requirements: */
 
 .gatsby-highlight-code-line {
-  /* background-color: #feb; */
-  background-color: var(--code-highlight);
+  background-color: var(--dark-steel);
   display: block;
   margin-right: -1em;
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
-  /* border-left: 0.25em solid #f99; */
-  border-left: 0.25em solid var(--green-dark);
+  border-left: 0.25em solid var(--turquoise-accent);
 }
 
 
@@ -143,8 +131,7 @@ pre[class*="language-"] {
  * and overflow that we removed from <pre>.
  */
  .gatsby-highlight {
-  /* background-color: #fdf6e3; */
-  background-color: var(--code-background);
+  background-color: var(--light-steel);
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 1em;

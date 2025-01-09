@@ -3,7 +3,7 @@ key: "blog-post"
 date: "2023-10-01"
 slug: "post-2"
 title: "How to write a blog"
-stack: ["dies", "das", "ananas", "else"]
+stack: ["Angular", "RxJS", "TypeScript"]
 ---
 
 Blog ideas:

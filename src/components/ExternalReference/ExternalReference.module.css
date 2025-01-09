@@ -6,23 +6,24 @@
 }
 
 .icon > svg > path {
-  fill: var(--light-gray);
+  fill: var(--medium-gray);
 }
 
 .container:hover {
   & .text {
-    color: var(--primary-green);
+    color: var(--turquoise-accent);
+    text-decoration: underline;
   }
-
+  
   & svg > path {
-    fill: var(--primary-green);
+    fill: var(--turquoise-accent);
   }
 }
 
 .text {
   font-size: 0.8rem;
   line-height: 1;
-  color: var(--light-gray);
+  color: var(--medium-gray);
 }
 
 .icon {

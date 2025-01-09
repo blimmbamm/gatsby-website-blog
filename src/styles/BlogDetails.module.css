@@ -2,7 +2,8 @@
   width: 100%;
   max-width: 1000px;
   color: var(--dark-gray);
-  margin: auto;
+  margin-inline: auto;
+  flex: 1;
 }
 
 .header {
@@ -13,4 +14,8 @@
 
 .title {
   text-align: center;
+}
+
+.date {
+  color: var(--medium-gray);
 }

@@ -7,6 +7,7 @@
 .navbar {
   display: flex;
   width: fit-content;
+  flex-wrap: wrap;
   padding: 20px;
   margin: auto;
   gap: 2rem;
@@ -17,33 +18,31 @@
   font-weight: 600;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
-  color: var(--background-whitish);
+  color: var(--dark-gray);
   border: 3px solid transparent;
   border-radius: 8px;
 }
 
 .navbar a:hover {
   opacity: 0.9;
-  border: 3px solid var(--background-whitish);
+  border: 3px solid var(--turquoise-accent);
+  color: var(--turquoise-accent);
 }
 
 .navbar .active {
-  color: var(--primary-green);
-  border: 3px solid var(--green-dark);
-  &:hover {
-    border: 3px solid var(--green-dark);
-  }
-
+  color: var(--light-lime);
+  border: 3px solid var(--dark-gray);
+  border: 3px solid var(--light-lime);
 }
 
 .content {
   margin: 1rem;
+  margin-top: 0;
   flex: 1;
-   display: flex;
+  display: flex;
 }
 
 .footer {
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--background-whitish);
 }

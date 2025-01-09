@@ -28,6 +28,7 @@
 
   &:hover {
     opacity: 0.9;
+    color: var(--turquoise-accent);
     text-decoration: underline;
   }
 }
@@ -43,11 +44,10 @@
 
 .sort {
   margin-left: 40px;
-  box-shadow: 1px 1px 2px var(--green-dark);
 }
 
 .divider {
   border: none;
-  border-top: 1px solid var(--green-dark);
+  border-top: 1px solid var(--medium-gray);
   margin-inline: -0.5rem;
 }

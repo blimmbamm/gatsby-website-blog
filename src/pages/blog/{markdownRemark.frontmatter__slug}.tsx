@@ -13,20 +13,18 @@ export default function BlogPostTemplate(
   const { frontmatter, html } = { ...props.data.markdownRemark };
 
   return (
-    <div className={styles.container}>
-      <Card>
-        <div className={styles.header}>
-          <Button
-            onClick={() => navigate("..")}
-            icon={<ArrowBackIcon />}
-            label="Back"
-          />
-          <span>{frontmatter?.date}</span>
-        </div>
-        <h1 className={styles.title}>{frontmatter?.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html || "" }} />
-      </Card>
-    </div>
+    <Card className={styles.container}>
+      <div className={styles.header}>
+        <Button
+          onClick={() => navigate("..")}
+          icon={<ArrowBackIcon />}
+          label="Back"
+        />
+        <span className={styles.date}>{frontmatter?.date}</span>
+      </div>
+      <h1 className={styles.title}>{frontmatter?.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: html || "" }} />
+    </Card>
   );
 }
 
