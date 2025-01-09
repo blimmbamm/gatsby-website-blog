@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React, { PropsWithChildren } from "react";
 
-import * as styles from "../styles/Layout.module.css";
+import * as styles from "./Layout.module.css";
 
 export default function Layout(props: PropsWithChildren) {
   return (
@@ -15,6 +15,9 @@ export default function Layout(props: PropsWithChildren) {
         </Link>
         <Link to="/projects" activeClassName={styles.active}>
           Projects
+        </Link>
+        <Link to="/about" activeClassName={styles.active}>
+          About
         </Link>
       </nav>
       <main className={styles.content}>{props.children}</main>

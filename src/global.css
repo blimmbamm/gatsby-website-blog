@@ -34,8 +34,12 @@ body {
   --code-background: rgb(213, 239, 240);
   --code-highlight: rgb(183, 216, 212);
   --blue-3: rgb(138, 185, 180);
+
+  /* --blue-1: #1cc089; */
+  --blue-1: #42cfa0;
   /* --code-highlight: rgb(151, 214, 143); */
-  color: var(--background-whitish);
+  /* color: var(--background-whitish); */
+  color: var(--dark-gray);
   
 }
 

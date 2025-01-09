@@ -45,4 +45,5 @@
 .footer {
   text-align: center;
   margin-bottom: 1rem;
+  color: var(--background-whitish);
 }

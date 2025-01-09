@@ -2705,6 +2705,11 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type AboutPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AboutPageQuery = { readonly markdownRemark: { readonly html: string | null } | null };
+
 type BlogPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
