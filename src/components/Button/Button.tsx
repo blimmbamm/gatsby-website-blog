@@ -10,12 +10,12 @@ interface ButtonProps
 }
 
 export default function Button(props: ButtonProps) {
-  const { className, ...otherProps } = props;
+  const { className, label, icon, ...otherProps } = props;
 
   return (
-    <div className={`${styles.host} ${props.className || ""}`} {...otherProps}>
-      <div className={styles.icon}>{props.icon}</div>
-      <span>{props.label}</span>
+    <div className={`${styles.host} ${className || ""}`} {...otherProps}>
+      <div className={styles.icon}>{icon}</div>
+      <span>{label}</span>
     </div>
   );
 }
