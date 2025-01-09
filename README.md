@@ -8,3 +8,18 @@ codeSplits.forEach((split, idx) => {
   // finalCode += split.highlight ? split.code : `${split.code}${idx == lastIdx ? `` : `\n`}`;
 });
 ```
+
+In `node_modules\prismjs\plugins\line-highlight\prism-line-highlight.css`, use this rule:
+
+```css
+@media print {
+	.line-highlight {
+		/*
+		 * This will prevent browsers from replacing the background color with white.
+		 * It's necessary because the element is layered on top of the displayed code.
+		 */
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+}
+```
