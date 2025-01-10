@@ -3,4 +3,4 @@ node_modules/
 public
 todo
 
-gatsby-types.d.ts
+src/gatsby-types.d.ts
