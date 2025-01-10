@@ -3,9 +3,9 @@ import Card from "../components/Card/Card";
 import { graphql, PageProps } from "gatsby";
 
 import CardList from "../components/CardList/CardList";
-import ExternalLinkIcon from "../images/link-to-extern.svg";
+import ExternalLinkIcon from "../images/link-to-extern.inline.svg";
 import ExternalReference from "../components/ExternalReference/ExternalReference";
-import GitHubIcon from "../images/github-mark.svg";
+import GitHubIcon from "../images/github-mark.inline.svg";
 import TechStack from "../components/TechStack/TechStack";
 
 import * as styles from "../styles/Projects.module.css";

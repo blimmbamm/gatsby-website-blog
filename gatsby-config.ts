@@ -6,16 +6,8 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /images/ 
-        }
-      }
+      resolve: "gatsby-plugin-svgr-svgo",
     },
     {
       resolve: `gatsby-source-filesystem`,

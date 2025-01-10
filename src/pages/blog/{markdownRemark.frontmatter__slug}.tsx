@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, navigate, PageProps } from "gatsby";
 
 import Card from "../../components/Card/Card";
-import ArrowBackIcon from "../../images/arrow_back.svg";
+import ArrowBackIcon from "../../images/arrow_back.inline.svg";
 
 import * as styles from "../../styles/BlogDetails.module.css";
 import Button from "../../components/Button/Button";

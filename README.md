@@ -19,7 +19,7 @@ In `node_modules\prismjs\plugins\line-highlight\prism-line-highlight.css`, use t
 		 * It's necessary because the element is layered on top of the displayed code.
 		 */
 		-webkit-print-color-adjust: exact;
-		print-color-adjust: exact;
+		print-color-adjust: exact; /* previously was only 'color-adjust' and thus webpack complained*/
 	}
 }
 ```

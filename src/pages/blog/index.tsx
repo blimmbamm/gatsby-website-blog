@@ -1,8 +1,8 @@
 import { graphql, Link, PageProps } from "gatsby";
 import React, { useState } from "react";
 
-import ArrowDownIcon from "../../images/arrow_downward.svg";
-import ArrowUpIcon from "../../images/arrow_upward.svg";
+import ArrowDownIcon from "../../images/arrow_downward.inline.svg";
+import ArrowUpIcon from "../../images/arrow_upward.inline.svg";
 import Card from "../../components/Card/Card";
 import TechStack from "../../components/TechStack/TechStack";
 
