@@ -8,10 +8,31 @@
   & a {
     /* text-decoration: none; */
     color: inherit;
-
   }
   & a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: var(--turquoise-accent);
+  }
+}
+
+.markdown-gif {
+  display: flex;
+  justify-content: center;
+
+  & img {
+    max-width: 100%;
+    border: 1px solid var(--dark-steel);
+  }
+}
+
+.blog-markdown {
+  & p {
+    & a {
+      color: inherit;
+    }
+
+    & a:hover {
+      color: var(--turquoise-accent);
+    }
   }
 }

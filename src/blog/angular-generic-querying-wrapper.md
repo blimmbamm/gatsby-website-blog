@@ -1,7 +1,7 @@
 ---
 date: "2025-01-13"
 key: "blog-post"
-slug: "angular-generic-http-fetching-wrapper"
+slug: "angular-generic-http-querying-wrapper"
 title: "A generic http fetching wrapper for Angular using RxJS"
 stack: ["Angular", "RxJS", "TypeScript"]
 ---
@@ -48,7 +48,7 @@ In a template, the returned observables should be usable in the usual way of usi
 
 As mentioned above, these states should be exclusively truthy, that is, only one block should be displayed at each time. Of course, this behavior could also be achieved by using `if else` or `switch` statements. In the latter approach however, one is bound to the structure of such statements, whereas in my approach, the three blocks can be used in any order and desired structure.
 
-## Dummy http request
+## A dummy http request
 
 In Angular, one would typically use the built-in http client to make API calls:
 
@@ -95,7 +95,7 @@ function fakeQueryFn(args: {
 }
 ```
 
-The function has a parameter `index` and will return the `index`-th element of `DUMMY_DATA` as observable, unless we specify by `letItFail = true`. In that case, the request artificially fails and throws an `HttpErrorResponse`, just as the built-in Angular `HttpClient` would do in case of an error. By `delay`, we can add some milliseconds of delay to the function such that we can better see the loading state.
+The function has a parameter `index` and will return the `index`-th element of `DUMMY_DATA` as observable, unless we specify `letItFail = true`. In that case, the request artificially fails and throws an `HttpErrorResponse`, just as the built-in Angular `HttpClient` would do in case of an error. By `delay`, we can add some milliseconds of delay to the function such that we can better see the loading state.
 
 ## A simple starting case
 
@@ -211,8 +211,8 @@ And in the component template:
 
 The result should be the following:
 
-<div style="display: flex; justify-content: center">
-  <img src="/gifs/fetching-state-2.gif" style="max-width: 100%; border: 1px solid var(--dark-steel)">
+<div class="markdown-gif">
+  <img src="/gifs/blog/angular-generic-querying-wrapper/querying-wrapper-1.gif">
 </div>
 
 ## The parametrized case
@@ -463,8 +463,8 @@ In the template, we write the following:
 
 The result should look like this
 
-<div style="display: flex; justify-content: center">
-  <img src="/gifs/fetching-state-parametrized.gif" style="max-width: 100%; border: 1px solid var(--dark-steel)">
+<div class="markdown-gif">
+  <img src="/gifs/blog/angular-generic-querying-wrapper/querying-wrapper-2.gif">
 </div>
 
 Please note that `paramsObs` won't emit new values, if the `index` query param doesn't change, i.e. the same random index is sampled. 
