@@ -78,7 +78,7 @@ export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
       </div>
       {blogPosts.map((post, index, posts) => (
         <div key={post.id}>
-          <div key={post.id} className={styles.post}>
+          <div className={styles.post}>
             <div>
               <h2 className={styles.date}>{post.date}</h2>
               <Link className={styles.link} to={post.slug || ""}>
