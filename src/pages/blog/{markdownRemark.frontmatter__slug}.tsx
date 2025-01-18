@@ -6,6 +6,7 @@ import ArrowBackIcon from "../../images/arrow_back.inline.svg";
 
 import * as styles from "../../styles/BlogDetails.module.css";
 import Button from "../../components/Button/Button";
+import HeadTag from "../../components/HeadTag/HeadTag";
 
 export default function BlogPostTemplate(
   props: PageProps<Queries.BlogPostTemplateQuery>
@@ -23,7 +24,10 @@ export default function BlogPostTemplate(
         <span className={styles.date}>{frontmatter?.date}</span>
       </div>
       <h1 className={styles.title}>{frontmatter?.title}</h1>
-      <div className="markdown-text markdown-blog-text" dangerouslySetInnerHTML={{ __html: html || "" }} />
+      <div
+        className="markdown-text markdown-blog-text"
+        dangerouslySetInnerHTML={{ __html: html || "" }}
+      />
     </Card>
   );
 }
@@ -35,12 +39,20 @@ export const pageQuery = graphql`
       frontmatter {
         date
         slug
-        title
+        title,
+        description,
+        keywords
       }
     }
   }
 `;
 
 export function Head(props: PageProps<Queries.BlogPostTemplateQuery>) {
-  return <title>{props.data.markdownRemark?.frontmatter?.title}</title>;
+  return (
+    <HeadTag
+      title={props.data.markdownRemark?.frontmatter?.title || ""}
+      description={props.data.markdownRemark?.frontmatter?.description || ""}
+      keywords={props.data.markdownRemark?.frontmatter?.keywords || []}
+    />
+  );
 }

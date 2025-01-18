@@ -4,6 +4,8 @@ date: "2025-01-16"
 slug: "react-querying-wrapper-with-refetching"
 title: "Cloning Tanstack Query's useQuery"
 stack: ["React", "TypeScript"]
+description: 'This is how you can implement a generic wrapper for http operations in React'
+keywords: ['react', 'useeffect', 'usecontext', 'query', 're-fetching']
 ---
 
 ## Content

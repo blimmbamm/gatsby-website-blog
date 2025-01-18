@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as styles from "../styles/Home.module.css";
+import HeadTag from "../components/HeadTag/HeadTag";
 
 export default function HomePage() {
   return (
@@ -16,5 +17,11 @@ export default function HomePage() {
 }
 
 export function Head() {
-  return <title>Home</title>;
+  return (
+    <HeadTag
+      title="Home"
+      description={"Coding blog and project portfolio web page"}
+      keywords={["coding", "blog", "frontend", "react", "angular"]}
+    />
+  );
 }

@@ -4,6 +4,8 @@ date: "2025-01-14"
 slug: "angular-http-refetching"
 title: "A query service for Angular that handles refetching"
 stack: ["Angular", "RxJS", "TypeScript"]
+description: 'This is how you can implement data refetching in angular using observables'
+keywords: ['angular', 'rxjs', 'fetching', 'query', 're-fetching', 'behaviorsubject', 'observable']
 ---
 
 ## Content

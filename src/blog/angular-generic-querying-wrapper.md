@@ -4,6 +4,8 @@ key: "blog-post"
 slug: "angular-generic-http-querying-wrapper"
 title: "A generic http fetching wrapper for Angular using RxJS"
 stack: ["Angular", "RxJS", "TypeScript"]
+description: 'This is how you can implement a wrapper for querying http queries in Angular'
+keywords: ['angular', 'rxjs', 'fetching', 'query', 'loading state', 'error state', 'behaviorsubject', 'observable']
 ---
 
 ## Content

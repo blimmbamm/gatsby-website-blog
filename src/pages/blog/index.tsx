@@ -8,6 +8,7 @@ import TechStack from "../../components/TechStack/TechStack";
 
 import * as styles from "../../styles/Blog.module.css";
 import Button from "../../components/Button/Button";
+import HeadTag from "../../components/HeadTag/HeadTag";
 
 export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
   // Slightly reshape data:
@@ -87,7 +88,7 @@ export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
             </div>
             <TechStack stack={post.stack || []} />
           </div>
-          {index < posts.length-1 && <hr className={styles.divider} />}
+          {index < posts.length - 1 && <hr className={styles.divider} />}
         </div>
       ))}
     </Card>
@@ -95,7 +96,13 @@ export default function BlogPage(props: PageProps<Queries.BlogPageQuery>) {
 }
 
 export function Head() {
-  return <title>Blog</title>;
+  return (
+    <HeadTag
+      title="Blog"
+      description="Blog home page with list of all blog posts, filter by technology"
+      keywords={["blog", "coding", "frontend", "angular", "react"]}
+    />
+  );
 }
 
 export const pageQuery = graphql`
