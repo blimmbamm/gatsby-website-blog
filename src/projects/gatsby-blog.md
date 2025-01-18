@@ -3,7 +3,7 @@ key: "project"
 name: "This very page!"
 date: "2025-01-02"
 website: ".."
-github: ""
+github: "https://github.com/blimmbamm/gatsby-website-blog"
 stack: ["Gatsby", "React", "TypeScript", "Markdown"]
 ---
 
