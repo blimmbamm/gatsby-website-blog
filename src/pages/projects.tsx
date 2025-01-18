@@ -37,7 +37,7 @@ export default function ProjectsPage(
           <h1 className={styles.title}>{project?.name}</h1>
           <h2 className={styles.date}>{project?.date}</h2>
           <div
-            className={styles.description}
+            className={`${styles.description} markdown-text`}
             dangerouslySetInnerHTML={{ __html: project?.html || "" }}
           />
           <TechStack stack={project.stack || []} />

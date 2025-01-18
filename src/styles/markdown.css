@@ -23,11 +23,12 @@
   }
 }
 
-.blog-markdown {
+.markdown-blog-text {
   line-height: 1.5;
-  
-  & p {
+}
 
+.markdown-text {  
+  & p {
 
     & a {
       color: inherit;

@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-demo",
+  "name": "gatsby-website-blog",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby-demo",
+  "description": "gatsby-website-blog",
   "author": "Robin Heinz",
   "keywords": [
     "gatsby"

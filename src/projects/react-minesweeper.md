@@ -1,12 +1,14 @@
 ---
 key: "project"
 name: "React Minesweeper"
-date: "2024-12-28"
-website: "link-to-somewhere"
-github: "link-to-github"
-stack: ["React", "Node.js"]
+date: "2023-09-12"
+website: "https://react-minesweeper.onrender.com"
+github: "https://github.com/blimmbamm/react-minesweeper"
+stack: ["React", "Redux"]
 ---
 
-This is a small description of the project.
+This is my first single page application I built with React to train the basic concepts, such as passing props, managing and lifting up state, css modules and useEffect.
 
-It can use line breaks etc. Does this really break line?
+At first, I tried to use the useContext hook to write the game logic, but I then decided that it would be a good opportunity to practice some Redux! So, the general game logic is now implemented using React Redux and the Redux toolkit.
+
+Design is inspired by/copied from Google's Minesweeper.

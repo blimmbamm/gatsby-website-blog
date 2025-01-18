@@ -1,4 +1,4 @@
-# Fixes for 
+# Fixes for code highlighting to work properly
 
 In `\node_modules\gatsby-remark-prismjs\highlight-code.js` adjust in the following way, because otherwise jsx/tsx will not properly be highlighted (highlighted code lines):
 

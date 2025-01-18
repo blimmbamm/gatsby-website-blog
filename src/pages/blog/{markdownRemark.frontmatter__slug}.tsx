@@ -23,7 +23,7 @@ export default function BlogPostTemplate(
         <span className={styles.date}>{frontmatter?.date}</span>
       </div>
       <h1 className={styles.title}>{frontmatter?.title}</h1>
-      <div className="blog-markdown" dangerouslySetInnerHTML={{ __html: html || "" }} />
+      <div className="markdown-text markdown-blog-text" dangerouslySetInnerHTML={{ __html: html || "" }} />
     </Card>
   );
 }
