@@ -1,5 +1,5 @@
 .chip {
-  background-color: var(--dark-steel);
+  background-color: var(--light-gray-2);
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   width: fit-content;
@@ -8,13 +8,11 @@
 }
 
 .selected {
-  background-color: var(--turquoise-accent);
+  background: var(--gradient-accent);
   color: var(--light-lime);
 }
 
 .selectable {
-  font-size: 0.8rem;
-  padding: 0.3rem 0.6rem;
   &:hover {
     cursor: pointer;
     opacity: 0.8;

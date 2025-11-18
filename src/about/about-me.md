@@ -10,7 +10,7 @@ I also like running. Running up some hill or mountain, fields, forest, doesn't m
 
 Ok, that's all.
 
-Here's a cite from some unknown person that I stumbled upton and that I wanna share with you:
+Here's a cite from some person that I stumbled upon and that I want to share with you:
 
 > It's easier to push if you stand behind something.
 >

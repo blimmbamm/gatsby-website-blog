@@ -15,20 +15,20 @@
 .post {
   display: flex;
   align-items: center;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
+  padding-block: 0.5rem;
 }
 
 .link {
   display: inline-block;
   text-decoration: none;
   color: var(--dark-gray);
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 500;
 
   &:hover {
     opacity: 0.9;
-    color: var(--turquoise-accent);
+    font-weight: bold;
+    color: var(--gradient-accent-start);
     text-decoration: underline;
   }
 }
@@ -37,7 +37,7 @@
   margin-top: 0;
   font-size: 1rem;
   font-style: italic;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 0.25rem;
   color: var(--medium-gray);
 }
@@ -49,5 +49,5 @@
 .divider {
   border: none;
   border-top: 1px solid var(--medium-gray);
-  margin-inline: -0.5rem;
+  margin-inline: -1rem;
 }
