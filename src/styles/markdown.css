@@ -9,7 +9,8 @@
     color: inherit;
   }
   & a:hover {
-    color: var(--turquoise-accent);
+    color: var(--gradient-accent-start);
+    font-weight: bold;
   }
 }
 
@@ -27,15 +28,14 @@
   line-height: 1.5;
 }
 
-.markdown-text {  
+.markdown-text {
   & p {
-
     & a {
       color: inherit;
     }
 
     & a:hover {
-      color: var(--turquoise-accent);
+      color: var(--gradient-accent-start);
     }
   }
 }

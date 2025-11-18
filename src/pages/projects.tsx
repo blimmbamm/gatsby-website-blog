@@ -21,7 +21,7 @@ export default function ProjectsPage(
 
   return (
     <CardList>
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <Card key={project?.name}>
           <div className={styles.links}>
             <ExternalReference
@@ -42,6 +42,7 @@ export default function ProjectsPage(
             dangerouslySetInnerHTML={{ __html: project?.html || "" }}
           />
           <TechStack stack={project.stack || []} />
+          {index < projects.length - 1 && <hr className={styles.divider} />}
         </Card>
       ))}
     </CardList>

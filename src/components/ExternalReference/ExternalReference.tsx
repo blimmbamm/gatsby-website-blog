@@ -10,7 +10,7 @@ interface ExternalReferenceProps {
 
 export default function ExternalReference(props: ExternalReferenceProps) {
   return (
-    <a className={styles.container} href={props.link}>
+    <a className={styles.container} href={props.link} target="_blank">
       <div className={styles.icon}>{props.icon}</div>
       <span className={styles.text}>{props.text}</span>
     </a>

@@ -7,23 +7,38 @@ export default function Layout(props: PropsWithChildren) {
   return (
     <div className={styles.layout}>
       <nav className={styles.navbar}>
-        <Link to="/" activeClassName={styles.active}>
+        <Link
+          to="/"
+          className={styles.navBtn}
+          activeClassName={styles.activeNav}
+        >
           Home
         </Link>
-        <Link to="/blog" activeClassName={styles.active} partiallyActive>
+        <Link
+          to="/blog"
+          className={styles.navBtn}
+          activeClassName={styles.activeNav}
+          partiallyActive
+        >
           Blog
         </Link>
-        <Link to="/projects" activeClassName={styles.active}>
+        <Link
+          to="/projects"
+          className={styles.navBtn}
+          activeClassName={styles.activeNav}
+        >
           Projects
         </Link>
-        <Link to="/about" activeClassName={styles.active}>
+        <Link
+          to="/about"
+          className={styles.navBtn}
+          activeClassName={styles.activeNav}
+        >
           About
         </Link>
       </nav>
       <main className={styles.content}>{props.children}</main>
-      <footer className={styles.footer}>
-        &copy; 2025 Robin Heinz
-      </footer>
+      <footer className={styles.footer}>&copy; 2025 Robin Heinz</footer>
     </div>
   );
 }

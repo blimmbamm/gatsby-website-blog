@@ -11,12 +11,12 @@
 
 .container:hover {
   & .text {
-    color: var(--turquoise-accent);
+    color: var(--gradient-accent-start);
     text-decoration: underline;
   }
   
   & svg > path {
-    fill: var(--turquoise-accent);
+    fill: var(--gradient-accent-start);
   }
 }
 

@@ -1,39 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
 }
 
-/* html, body {
-  min-height: 100dvh;
-} */
-
-body {
-  background: rgb(172, 226, 160);
-  background-repeat: no-repeat;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  margin: 0;
-  word-spacing: 0.3rem;
-  
-
-  /*
-  Colors:  
-  - lime (only background)  
-  - super light lime (card background + light text color)
-  - dark gray (dark text color)
-  - medium gray (text color for date, external links and divider)
-  - dark stell (chips and highlight code)
-  - light steel (standard code)
-  - turquiose (links, hover effects, etc.)
-  */
-
+:root {
+  --background-color: rgb(238, 247, 235);
   --light-lime: rgb(235, 252, 236);
+  --light-gray: rgb(226, 226, 226);
+  --light-gray-2: rgb(206, 206, 206);
   --medium-gray: rgb(119, 119, 119);
   --dark-gray: rgb(75, 75, 75);
   --dark-steel: rgb(194, 230, 225);
   --light-steel: rgb(213, 239, 240);
   --turquoise-accent: #3bc496;
 
+  --gradient-accent-start: #16a34a;
+  --gradient-accent-end: #4ade80;
+  --gradient-accent: linear-gradient(
+    90deg,
+    var(--gradient-accent-start),
+    var(--gradient-accent-end)
+  );
+}
+
+body {
+  background: var(--background-color);
+  background-repeat: no-repeat;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  margin: 0;
+  word-spacing: 0.3rem;
   color: var(--dark-gray);
 }
 

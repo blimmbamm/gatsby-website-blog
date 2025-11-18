@@ -10,34 +10,101 @@
   flex-wrap: wrap;
   padding: 20px;
   margin: auto;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
 }
 
-.navbar a {
+:root {
+  --nav-border-radius: 12px;
+  --nav-border-width: 5px;
+
+  --nav-gradient-active: linear-gradient(90deg, #16a34a, #4ade80); 
+  --nav-gradient-hover: linear-gradient(
+    90deg,
+    var(--dark-gray),
+    var(--medium-gray)
+  );
+}
+
+/* Base button */
+.nav-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 28px;
+  border-radius: var(--nav-border-radius);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
   font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  color: var(--dark-gray);
-  border: 3px solid transparent;
-  border-radius: 8px;
+
+  color: transparent;
+  background-image: var(--nav-gradient-hover);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: opacity 0.25s ease;
 }
 
-.navbar a:hover {
-  opacity: 0.9;
-  border: 3px solid var(--turquoise-accent);
-  color: var(--turquoise-accent);
+/* Default state: border hidden */
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--nav-border-radius);
+  padding: var(--nav-border-width);
+
+  /* Will switch between gradients depending on state */
+  background: transparent;
+
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: opacity 0.25s ease, background 0.25s ease;
+  pointer-events: none;
 }
 
-.navbar .active {
-  color: var(--light-lime);
-  border: 3px solid var(--dark-gray);
-  border: 3px solid var(--light-lime);
+/* ----------------------------- */
+/* HOVER STATE (inactive only)   */
+/* ----------------------------- */
+.nav-btn:hover {
+  opacity: 0.8;
+  color: transparent;
+  background-image: var(--nav-gradient-hover);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.nav-btn:hover::before {
+  opacity: 1;
+  background: var(--nav-gradient-hover);
+}
+
+/* ----------------------------- */
+/* ACTIVE ROUTE (via Gatsby)     */
+/* ----------------------------- */
+.active-nav {
+  color: transparent !important;
+  background-image: var(--nav-gradient-active) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+.active-nav::before {
+  opacity: 1 !important;
+  background: var(--nav-gradient-active) !important;
 }
 
 .content {
   margin: 1rem;
-  margin-top: 0;
+  margin-top: 1rem;
   flex: 1;
   display: flex;
 }
