@@ -2,7 +2,9 @@
 key: "project"
 name: "Movie app"
 date: "2023-10-16"
-website: "https://movie-app-09vo.onrender.com"
+websites:
+  - title: "View website"
+    url: "https://movie-app-09vo.onrender.com"
 github: "https://github.com/blimmbamm/movie-app"
 stack: ["React", "React Router", "Nginx", "Docker"]
 ---

@@ -29,11 +29,13 @@ export default function ProjectsPage(
               link={project?.github || ""}
               text={"View on GitHub"}
             />
-            <ExternalReference
-              icon={<ExternalLinkIcon />}
-              link={project?.website || ""}
-              text={"View website"}
-            />
+            {project.websites?.map((website) => (
+              <ExternalReference
+                icon={<ExternalLinkIcon />}
+                link={website?.url || ""}
+                text={website?.title || ""}
+              />
+            ))}
           </div>
           <h1 className={styles.title}>{project?.name}</h1>
           <h2 className={styles.date}>{project?.date}</h2>
@@ -69,7 +71,10 @@ export const pageQuery = graphql`
         frontmatter {
           name
           date
-          website
+          websites {
+            title
+            url
+          }
           github
           stack
         }

@@ -2,7 +2,9 @@
 key: "project"
 name: "React Minesweeper"
 date: "2023-09-12"
-website: "https://react-minesweeper.onrender.com"
+websites: 
+  - title: "View website" 
+    url: "https://react-minesweeper.onrender.com"
 github: "https://github.com/blimmbamm/react-minesweeper"
 stack: ["React", "Redux"]
 ---

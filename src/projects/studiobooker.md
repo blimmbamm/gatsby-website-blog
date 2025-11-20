@@ -2,7 +2,11 @@
 key: "project"
 name: "Studiobooker"
 date: "2025-05-01"
-website: "https://studiobooker.onrender.com"
+websites: 
+  - title: "View dashboard" 
+    url: "https://studiobooker.onrender.com"
+  - title: "View public page"
+    url: "https://studiobooker-web.vercel.app/"
 github: "https://github.com/blimmbamm/studiobooker"
 stack: ["TypeScript", "React", "Mui", "Nest", "TypeORM", "Nx"]
 ---

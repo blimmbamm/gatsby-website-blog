@@ -2,7 +2,9 @@
 key: "project"
 name: "Google Keep Clone"
 date: "2025-02-03"
-website: "https://google-keep-clone-cskh.onrender.com"
+websites: 
+  - title: "View website"
+    url: "https://google-keep-clone-cskh.onrender.com"
 github: "https://github.com/blimmbamm/google-keep-clone"
 stack: ["Angular", "RxJS", "Material", "TypeScript"]
 ---

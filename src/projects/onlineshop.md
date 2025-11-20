@@ -2,7 +2,9 @@
 key: "project"
 name: "Onlineshop"
 date: "2023-05-19"
-website: "https://onlineshop-ze3g.onrender.com"
+websites:
+  - title: "View website"
+    url: "https://onlineshop-ze3g.onrender.com"
 github: "https://github.com/blimmbamm/onlineshop"
 stack: ["Node", "Express", "EJS", "MongoDB"]
 ---
